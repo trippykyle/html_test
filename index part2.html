@@ -9,17 +9,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/e50b24a569.js" crossorigin="anonymous"></script>
-    <style>
-        .task-divider {
-            border-left: 2px solid gray; /* Line color and width */
-            height: 20px; /* Adjust as needed */
-            margin: 0 10px; /* Spacing around the line */
-        }
-        .task-header {
-            border-bottom: 2px solid gray; /* Horizontal line below header */
-            padding-bottom: 5px; /* Space between header and line */
-        }
-    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -53,42 +42,25 @@
     </form>
     
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-12">
-                <table class="table">
-                    <tr>
-                        <th class="task-header col-sm-11">Task</th>
-                        <th class="col-sm-1">Action</th>
-                    </tr>
-                    <tr>
-                        <td>Task 1</td>
-                        <td>
-                            <div class="d-flex align-items-center">
-                                <div class="task-divider"></div>
-                                <i class="fa-solid fa-trash" style="cursor:pointer;" onclick="showAlert();"></i>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Task 2</td>
-                        <td>
-                            <div class="d-flex align-items-center">
-                                <div class="task-divider"></div>
-                                <i class="fa-solid fa-trash" style="cursor:pointer;" onclick="showAlert();"></i>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-            </div>
+        <div class="row" class="col-sm-9" >
         </div>
     </div>
+
+    <ul id="taskList" class="list-group">
+        <li class="task list-group-item d-flex justify-content-between align-items-center">
+            Task 1
+            <div>
+                <i class="fa-solid fa-trash" style="cursor:pointer;" onclick="alert('Delete Task 1');"></i>
+            </div>
+        </li>
+        <li class="task list-group-item d-flex justify-content-between align-items-center">
+            Task 2 
+            <div>
+                <i class="fa-solid fa-trash" style="cursor:pointer;" onclick="alert('Delete Task 2');"></i>
+            </div>
+        </li>
+    </ul>
     
     <a href="new.html">Go to Page 2</a>
-
-    <script>
-        function showAlert() {
-            alert("This page does not render");
-        }
-    </script>
 </body>
 </html>
